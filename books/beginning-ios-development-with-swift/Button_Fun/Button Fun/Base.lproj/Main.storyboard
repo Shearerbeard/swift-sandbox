@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,13 +10,56 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Button_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="qo3-qq-LhA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ODT-Br-5J8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="zZj-X4-645">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vng-dk-wMi">
+                                <rect key="frame" x="20" y="285" width="30" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mu5-tl-ZYZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haQ-6Z-1Pj">
+                                <rect key="frame" x="544" y="285" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZO-ft-Krk"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8R-wm-Jab">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Button Fun" id="Adm-Rj-jcn"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9g-YM-v6k">
+                                <rect key="frame" x="279" y="60" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hfy-kt-Zod"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B9g-YM-v6k" firstAttribute="top" secondItem="o8R-wm-Jab" secondAttribute="bottom" constant="16" id="G3j-No-Y5z"/>
+                            <constraint firstItem="haQ-6Z-1Pj" firstAttribute="centerY" secondItem="zZj-X4-645" secondAttribute="centerY" id="NTR-lG-TSX"/>
+                            <constraint firstItem="vng-dk-wMi" firstAttribute="leading" secondItem="zZj-X4-645" secondAttribute="leadingMargin" id="ONh-dK-4vC"/>
+                            <constraint firstItem="o8R-wm-Jab" firstAttribute="leading" secondItem="zZj-X4-645" secondAttribute="leading" id="Sc1-XH-nv1"/>
+                            <constraint firstItem="haQ-6Z-1Pj" firstAttribute="trailing" secondItem="zZj-X4-645" secondAttribute="trailingMargin" id="VgP-Fs-6AS"/>
+                            <constraint firstItem="o8R-wm-Jab" firstAttribute="top" secondItem="zZj-X4-645" secondAttribute="top" id="aap-Po-S0h"/>
+                            <constraint firstItem="vng-dk-wMi" firstAttribute="baseline" secondItem="haQ-6Z-1Pj" secondAttribute="baseline" id="lsX-f0-cSH"/>
+                            <constraint firstAttribute="trailing" secondItem="o8R-wm-Jab" secondAttribute="trailing" id="pso-tk-0fp"/>
+                            <constraint firstItem="vng-dk-wMi" firstAttribute="centerY" secondItem="zZj-X4-645" secondAttribute="centerY" id="qVV-cS-E7I"/>
+                            <constraint firstItem="B9g-YM-v6k" firstAttribute="centerX" secondItem="o8R-wm-Jab" secondAttribute="centerX" id="yxx-vn-7Pe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
