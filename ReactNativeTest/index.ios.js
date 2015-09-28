@@ -20,7 +20,7 @@ var ReactNativeTest = React.createClass({
     longitudeDelta: 0.001
   },
   getInitialState: () => ({initial:
-    {latitute: 0, longitude: 0}}),
+    {latitude: 0, longitude: 0}}),
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
         (initial) => this.setState({initial}),
@@ -28,7 +28,6 @@ var ReactNativeTest = React.createClass({
         {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000});
     this.watchId = navigator.geolocation.watchPosition(initial => {
       this.setState({initial: initial.coords});
-      console.warn(this.state);
     })
   },
   componentWillUnmount() {
@@ -45,8 +44,7 @@ var ReactNativeTest = React.createClass({
         </View>
         <MapView style={styles.map}
                  region={region}
-                 showsUserLocation={true}
-                 annotations={annotations}>
+                 showsUserLocation={true}>
         </MapView>
       </View>
     );
@@ -66,8 +64,6 @@ var styles = StyleSheet.create({
   textBox: {
     height: 100,
     marginTop: 60,
-    lineHeight: 10.0,
-    textAlign: "center",
     alignItems: "center",
     justifyContent: "center"
   },
