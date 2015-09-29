@@ -56,7 +56,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
+        let controller = UIAlertController(title: "Are You Sure", message: nil, preferredStyle: .ActionSheet)
         
+        let yesAction = UIAlertAction(title: "Yes, I'm Sure", style: .Destructive, handler: {
+            action in let msg = (self.nameField.text != nil && self.nameField.text?.isEmpty != nil) ?
+                "Everything Okay" : "Everything Okay\(self.nameField.text)"
+            let controller2 = UIAlertController(title: "Something was Done", message: msg, preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Phew", style: .Cancel, handler: nil)
+            
+            controller2.addAction(cancelAction)
+            self.presentViewController(controller2, animated: true, completion: nil)
+        })
+        
+        let noAction = UIAlertAction(title: "No Way", style: .Cancel, handler: nil)
+        
+        controller.addAction(yesAction)
+        controller.addAction(noAction)
+        
+        if let ppc = controller.popoverPresentationController {
+            ppc.sourceView = sender
+            ppc.sourceRect = sender.bounds
+            ppc.permittedArrowDirections = .Down
+        }
+        
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
