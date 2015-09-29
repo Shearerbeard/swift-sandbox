@@ -5,6 +5,8 @@
 'use strict';
 
 var React = require('react-native');
+var {Map} = require('immutable');
+
 var {
   AppRegistry,
   StyleSheet,
@@ -20,7 +22,7 @@ var ReactNativeTest = React.createClass({
     longitudeDelta: 0.001
   },
   getInitialState: () => ({initial:
-    {latitute: 0, longitude: 0}}),
+    {latitude: 0, longitude: 0}}),
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
         (initial) => this.setState({initial}),
@@ -28,7 +30,6 @@ var ReactNativeTest = React.createClass({
         {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000});
     this.watchId = navigator.geolocation.watchPosition(initial => {
       this.setState({initial: initial.coords});
-      console.warn(this.state);
     })
   },
   componentWillUnmount() {
