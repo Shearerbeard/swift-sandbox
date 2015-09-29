@@ -46,8 +46,7 @@ var ReactNativeTest = React.createClass({
         </View>
         <MapView style={styles.map}
                  region={region}
-                 showsUserLocation={true}
-                 annotations={annotations}>
+                 showsUserLocation={true}>
         </MapView>
       </View>
     );
@@ -67,8 +66,6 @@ var styles = StyleSheet.create({
   textBox: {
     height: 100,
     marginTop: 60,
-    lineHeight: 10.0,
-    textAlign: "center",
     alignItems: "center",
     justifyContent: "center"
   },
