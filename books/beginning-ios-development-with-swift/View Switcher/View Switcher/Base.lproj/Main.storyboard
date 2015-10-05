@@ -45,7 +45,7 @@
         <!--Yellow View Controller-->
         <scene sceneID="K1g-tU-jyX">
             <objects>
-                <viewController id="x4r-Pa-lr9" customClass="YellowViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Yellow" id="x4r-Pa-lr9" customClass="YellowViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZkD-nd-A3F"/>
                         <viewControllerLayoutGuide type="bottom" id="iSX-Bb-TB4"/>
@@ -53,8 +53,22 @@
                     <view key="view" contentMode="scaleToFill" id="DTa-26-wwM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XT4-6O-AOv">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="yellowButtonPressed:" destination="x4r-Pa-lr9" eventType="touchUpInside" id="zWD-mA-KIB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.91613891534420355" blue="0.30762139878531447" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XT4-6O-AOv" firstAttribute="centerY" secondItem="DTa-26-wwM" secondAttribute="centerY" id="lOn-hK-Zyv"/>
+                            <constraint firstItem="XT4-6O-AOv" firstAttribute="centerX" secondItem="DTa-26-wwM" secondAttribute="centerX" id="yvF-vB-iIv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9c-CW-9ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,7 +78,7 @@
         <!--Blue View Controller-->
         <scene sceneID="lBC-2h-45h">
             <objects>
-                <viewController id="k3E-rY-cnF" customClass="BlueViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Blue" id="k3E-rY-cnF" customClass="BlueViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4CX-i3-nd4"/>
                         <viewControllerLayoutGuide type="bottom" id="yqm-gU-G25"/>
@@ -72,8 +86,24 @@
                     <view key="view" contentMode="scaleToFill" id="Qfl-XQ-IX2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0C-Hp-37L">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="blueButtonPressed:" destination="k3E-rY-cnF" eventType="touchUpInside" id="NaG-gJ-x1T"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45232466052796516" green="0.61604140610314118" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F0C-Hp-37L" firstAttribute="centerY" secondItem="Qfl-XQ-IX2" secondAttribute="centerY" id="9Ss-vw-OrP"/>
+                            <constraint firstItem="F0C-Hp-37L" firstAttribute="centerX" secondItem="Qfl-XQ-IX2" secondAttribute="centerX" id="BtH-jx-HEe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVa-fe-1Ux" userLabel="First Responder" sceneMemberID="firstResponder"/>
