@@ -7,7 +7,7 @@
         <!--Single-->
         <scene sceneID="FfQ-ad-hvp">
             <objects>
-                <viewController id="txo-ua-7Yw" sceneMemberID="viewController">
+                <viewController id="txo-ua-7Yw" customClass="SingleComponentPickerViewController" customModule="PIckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0o4-vZ-Sv9"/>
                         <viewControllerLayoutGuide type="bottom" id="yse-am-J1d"/>
@@ -27,7 +27,7 @@
         <!--Double-->
         <scene sceneID="XL4-zS-AEp">
             <objects>
-                <viewController id="5mJ-Pu-4Rx" sceneMemberID="viewController">
+                <viewController id="5mJ-Pu-4Rx" customClass="DoubleComponentViewController" customModule="PIckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0l-gO-CRN"/>
                         <viewControllerLayoutGuide type="bottom" id="PCf-5V-CMc"/>
@@ -47,7 +47,7 @@
         <!--Custom-->
         <scene sceneID="XmJ-2c-GT9">
             <objects>
-                <viewController id="Kaa-U5-IcF" sceneMemberID="viewController">
+                <viewController id="Kaa-U5-IcF" customClass="CustomPickerViewController" customModule="PIckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="btb-7X-9mr"/>
                         <viewControllerLayoutGuide type="bottom" id="vO7-9C-DPV"/>
@@ -67,7 +67,7 @@
         <!--Dependent-->
         <scene sceneID="tC7-jt-YKs">
             <objects>
-                <viewController id="eVI-4h-jlF" sceneMemberID="viewController">
+                <viewController id="eVI-4h-jlF" customClass="DependentComponentViewController" customModule="PIckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5uY-x2-YQ1"/>
                         <viewControllerLayoutGuide type="bottom" id="H6J-rG-WsO"/>
@@ -87,7 +87,7 @@
         <!--Date-->
         <scene sceneID="TPr-vH-e8i">
             <objects>
-                <viewController id="ogE-1I-sLW" sceneMemberID="viewController">
+                <viewController id="ogE-1I-sLW" customClass="DatePickerViewController" customModule="PIckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRa-u5-tES"/>
                         <viewControllerLayoutGuide type="bottom" id="HEx-Cj-XIF"/>
