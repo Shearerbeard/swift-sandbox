@@ -9,9 +9,28 @@
 import UIKit
 
 class DatePickerViewController: UIViewController {
+    
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        let date = datePicker.date
+        let message  = "The time you have selected is \(date)"
+        let alert = UIAlertController(
+            title: "Date and time selected", message: message, preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "Thats So True", style: .Default, handler: nil)
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let date = NSDate()
+        datePicker.setDate(date, animated: true)
 
         // Do any additional setup after loading the view.
     }
