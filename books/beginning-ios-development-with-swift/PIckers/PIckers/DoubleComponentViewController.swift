@@ -39,6 +39,10 @@ class DoubleComponentViewController: UIViewController, UIPickerViewDelegate, UIP
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == breadComponent {
             return breadTypes.count
