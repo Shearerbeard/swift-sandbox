@@ -35,6 +35,9 @@
                             <constraint firstItem="OtF-4k-2T0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="JlH-4X-vGD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="OtF-4k-2T0" id="svu-Xn-oUg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
