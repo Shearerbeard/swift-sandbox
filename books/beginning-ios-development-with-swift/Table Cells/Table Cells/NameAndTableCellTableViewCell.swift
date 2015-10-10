@@ -32,14 +32,14 @@ class NameAndTableCellTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let nameLabelRect = CGRectMake(7, 5, 70, 15)
+        let nameLabelRect = CGRectMake(0, 5, 70, 15)
         let nameMarker = UILabel(frame: nameLabelRect)
         nameMarker.textAlignment = NSTextAlignment.Right
         nameMarker.text = "Name:"
         nameMarker.font = UIFont.boldSystemFontOfSize(12)
         contentView.addSubview(nameMarker)
 
-        let colorLabelRect = CGRectMake(7, 26, 70, 15)
+        let colorLabelRect = CGRectMake(0, 26, 70, 15)
         let colorMarker = UILabel(frame: colorLabelRect)
         colorMarker.textAlignment = NSTextAlignment.Right
         colorMarker.text = "Color:"
