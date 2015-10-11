@@ -16,21 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="vIV-St-vBH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GNG-eW-gEh">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-Kk-haD">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="vIV-St-vBH">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                                <animations/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Aga-dV-tYa"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </tableView>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vIV-St-vBH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8xm-S0-Tcr"/>
-                            <constraint firstItem="vIV-St-vBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aEv-hJ-sDa"/>
-                            <constraint firstItem="vIV-St-vBH" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="eou-jc-EXI"/>
-                            <constraint firstAttribute="trailing" secondItem="vIV-St-vBH" secondAttribute="trailing" id="itJ-mP-irG"/>
+                            <constraint firstItem="GNG-eW-gEh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FgW-Zk-27z"/>
+                            <constraint firstItem="GNG-eW-gEh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="N7i-mH-skn"/>
+                            <constraint firstItem="GNG-eW-gEh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mS7-VU-u99"/>
+                            <constraint firstAttribute="trailing" secondItem="GNG-eW-gEh" secondAttribute="trailing" id="viW-aX-jdK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="vIV-St-vBH" id="UHO-Vo-cmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
