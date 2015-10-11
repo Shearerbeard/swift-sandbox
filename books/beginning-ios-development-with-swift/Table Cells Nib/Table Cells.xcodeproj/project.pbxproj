@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76A645BF1BC996D300CC3B56 /* NameAndColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A645BE1BC996D300CC3B56 /* NameAndColorCell.xib */; settings = {ASSET_TAGS = (); }; };
 		B6F3469919E8D4BA00E8296B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3469819E8D4BA00E8296B /* AppDelegate.swift */; };
 		B6F3469B19E8D4BA00E8296B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3469A19E8D4BA00E8296B /* ViewController.swift */; };
 		B6F3469E19E8D4BA00E8296B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F3469C19E8D4BA00E8296B /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76A645BE1BC996D300CC3B56 /* NameAndColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameAndColorCell.xib; sourceTree = "<group>"; };
 		B6F3469319E8D4BA00E8296B /* Table Cells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Cells.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F3469719E8D4BA00E8296B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F3469819E8D4BA00E8296B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				B6F3469F19E8D4BA00E8296B /* Images.xcassets */,
 				B6F346A119E8D4BA00E8296B /* LaunchScreen.xib */,
 				B6F3469619E8D4BA00E8296B /* Supporting Files */,
+				76A645BE1BC996D300CC3B56 /* NameAndColorCell.xib */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -159,6 +162,8 @@
 		B6F3468B19E8D4BA00E8296B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Apress;
 				TargetAttributes = {
@@ -195,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A645BF1BC996D300CC3B56 /* NameAndColorCell.xib in Resources */,
 				B6F3469E19E8D4BA00E8296B /* Main.storyboard in Resources */,
 				B6F346A319E8D4BA00E8296B /* LaunchScreen.xib in Resources */,
 				B6F346A019E8D4BA00E8296B /* Images.xcassets in Resources */,
