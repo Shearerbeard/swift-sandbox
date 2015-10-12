@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
 
     let sectionTableIdentifier = "SectionTableIdentifier"
+    
+    var searchController: UISearchController!
 
     var names: [String: [String]]!
     var keys: [String]!
@@ -29,6 +31,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         let namesDict = NSDictionary(contentsOfFile: path!)
         names = namesDict as! [String: [String]]
         keys = (namesDict!.allKeys as! [String]).sort()
+        
+        let resultsController = SearchResultsController()
+        
+        resultsController.names = names
+        resultsController.keys = keys
+        searchController = UISearchController(searchResultsController: resultsController)
+        
+        let searchBar = searchController.searchBar
+        searchBar.scopeButtonTitles = ["All", "Short", "Long"]
+        searchBar.placeholder = "Enter a search term"
+        searchBar.sizeToFit()
+        tableView.tableHeaderView = searchBar
+        searchController.searchResultsUpdater = resultsController
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +63,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return keys[section]
+    }
+    
+    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+        return keys
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
