@@ -44,6 +44,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         searchBar.sizeToFit()
         tableView.tableHeaderView = searchBar
         searchController.searchResultsUpdater = resultsController
+        
+        tableView.sectionIndexBackgroundColor = UIColor.blackColor()
+        tableView.sectionIndexTrackingBackgroundColor = UIColor.darkGrayColor()
+        tableView.sectionIndexColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {

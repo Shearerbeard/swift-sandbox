@@ -28,8 +28,37 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        tableView.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: sectionsTableIdentifier)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: sectionsTableIdentifier)
+    }
+    
+    // MARK: UISearchResultsUpdating Conformance
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchString = searchController.searchBar.text
+        let buttonIndex = searchController.searchBar.selectedScopeButtonIndex
         
+        filteredNames.removeAll(keepCapacity: true)
+        
+        if let searchString = searchString where !searchString.isEmpty {
+            let filter: String -> Bool = { name in
+                let nameLength = name.characters.count
+                if(buttonIndex == shortNamesButtonIndex
+                    && nameLength >= longNameSizse)
+                || (buttonIndex == longNamesButtonIndex && nameLength < longNameSizse) {
+                    return false
+                }
+                
+                let range = name.rangeOfString(searchString, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                return range != nil
+            }
+            
+            for key in keys {
+                let namesForKey = names[key]!
+                let matches = namesForKey.filter(filter)
+                filteredNames += matches
+            }
+        }
+        
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,12 +70,18 @@ class SearchResultsController: UITableViewController, UISearchResultsUpdating {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filteredNames.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(sectionsTableIdentifier, forIndexPath: indexPath)
+        cell.textLabel?.text = filteredNames[indexPath.row]
+        return cell
     }
     
 
