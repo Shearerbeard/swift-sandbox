@@ -19,27 +19,19 @@ class RootViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         familyNames = UIFont.familyNames().sort() as [String]
         let preferedTableFont = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         cellPointSize = preferedTableFont.pointSize
         favoritesList = FavortiesList.sharedFavoritesList
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -55,8 +47,8 @@ class RootViewController: UITableViewController {
     func fontForDisplay(atIndexPath indexPath: NSIndexPath) -> UIFont? {
         if indexPath.section == 0 {
             let familyName = familyNames[indexPath.row]
-            let fontName = UIFont.fontNamesForFamilyName(familyName).first as String!
-            return UIFont(name: fontName, size: cellPointSize)
+            let fontName = UIFont.fontNamesForFamilyName(familyName).first ?? nil
+            return fontName != nil ? UIFont(name: fontName!, size: cellPointSize) : nil
         } else {
             return nil
         }
