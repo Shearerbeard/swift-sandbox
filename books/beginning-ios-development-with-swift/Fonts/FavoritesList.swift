@@ -28,7 +28,7 @@ class FavortiesList {
     }
     
     func addFavorite(fontName: String) {
-        if(favorites.contains(fontName)) {
+        if(!favorites.contains(fontName)) {
             favorites.append(fontName)
             saveFavorites()
         }
@@ -45,5 +45,12 @@ class FavortiesList {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(favorites, forKey: "favorites")
         defaults.synchronize()
+    }
+    
+    func moveItem(fromIndex from: Int, toIndex to: Int) {
+        let item = favorites[from]
+        favorites.removeAtIndex(from)
+        favorites.insert(item, atIndex: to)
+        saveFavorites()
     }
 }

@@ -19,7 +19,7 @@ class RootViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 44.0
+        tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         
         familyNames = UIFont.familyNames().sort() as [String]
@@ -105,14 +105,23 @@ class RootViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+        let listVC = segue.destinationViewController as! FontListSubView
+        
+        if indexPath.section == 0 {
+            let familyName = familyNames[indexPath.row]
+            listVC.fontNames = UIFont.fontNamesForFamilyName(familyName) as [String]
+            listVC.navigationItem.title = familyName
+            listVC.showsFavorites = false
+        } else {
+            listVC.fontNames = favoritesList.favorites
+            listVC.navigationItem.title = "Favorites"
+            listVC.showsFavorites = true
+        }
     }
-    */
 
 }
