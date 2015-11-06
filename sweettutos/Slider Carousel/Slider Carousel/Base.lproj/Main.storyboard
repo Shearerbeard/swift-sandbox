@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Slider_Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhg-jr-qYG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </scrollView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCu-G2-B7r">
+                                <rect key="frame" x="79" y="480" width="442" height="83"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.20784313725490194" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iCu-G2-B7r" secondAttribute="height" multiplier="442:83" id="OPP-KX-4Qg"/>
+                                </constraints>
+                                <state key="normal" title="Lets Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="brw-qx-pVn">
+                                <rect key="frame" x="180" y="270" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="B90-2S-9BL"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WmI-Ds-rRi">
+                                <rect key="frame" x="246" y="64" width="109" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RI0-6l-Mz3"/>
+                                    <constraint firstAttribute="width" constant="109" id="zOc-rq-lMI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Text Icon" translatesAutoresizingMaskIntoConstraints="NO" id="oty-sx-6Kp">
+                                <rect key="frame" x="180" y="193" width="240" height="66"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="T3w-gV-hHw"/>
+                                    <constraint firstAttribute="width" constant="240" id="epP-Hj-9Dg"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="YRn-LC-EAG">
+                                <rect key="frame" x="272" y="388" width="55" height="37"/>
+                                <animations/>
+                            </pageControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WmI-Ds-rRi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5KY-Jk-KUW"/>
+                            <constraint firstItem="Uhg-jr-qYG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CLk-3F-RM2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iCu-G2-B7r" secondAttribute="bottom" constant="37" id="CgJ-Gh-m7h"/>
+                            <constraint firstItem="brw-qx-pVn" firstAttribute="leading" secondItem="oty-sx-6Kp" secondAttribute="leading" id="DC0-pr-Dpf"/>
+                            <constraint firstItem="iCu-G2-B7r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="GOP-b7-HsZ"/>
+                            <constraint firstItem="Uhg-jr-qYG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GZc-pw-XaC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iCu-G2-B7r" secondAttribute="trailing" constant="59" id="Ney-Jb-t7t"/>
+                            <constraint firstItem="WmI-Ds-rRi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="Nnr-Yi-SqZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="brw-qx-pVn" secondAttribute="bottom" constant="202" id="P6x-av-Mm3"/>
+                            <constraint firstItem="oty-sx-6Kp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SSE-oC-UFL"/>
+                            <constraint firstItem="brw-qx-pVn" firstAttribute="trailing" secondItem="oty-sx-6Kp" secondAttribute="trailing" id="Srn-28-aFJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Uhg-jr-qYG" secondAttribute="trailing" id="VGW-BB-32p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uhg-jr-qYG" secondAttribute="bottom" id="Vro-cc-4Ho"/>
+                            <constraint firstItem="brw-qx-pVn" firstAttribute="top" secondItem="oty-sx-6Kp" secondAttribute="bottom" constant="11" id="YnC-9J-cze"/>
+                            <constraint firstItem="YRn-LC-EAG" firstAttribute="top" secondItem="brw-qx-pVn" secondAttribute="bottom" constant="-10" id="Zpm-wj-HaD"/>
+                            <constraint firstItem="YRn-LC-EAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i9I-Qg-IqQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="YRn-LC-EAG" id="Pkk-gA-9cG"/>
+                        <outlet property="scrollView" destination="Uhg-jr-qYG" id="hUS-J4-0pP"/>
+                        <outlet property="startButton" destination="iCu-G2-B7r" id="SPH-re-BtT"/>
+                        <outlet property="textView" destination="brw-qx-pVn" id="Msi-Qo-rKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="661"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="182" height="204"/>
+        <image name="Text Icon" width="223" height="54"/>
+    </resources>
+</document>
