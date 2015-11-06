@@ -64,6 +64,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             textView.text = "And sometimes game tutorials about Unity"
         } else if Int(currentPage) == 2 {
             textView.text = "Keep visiting sweettuttos.com for new coming tutorials, "
+            UIView.animateWithDuration(0.3, animations: {() -> Void in self.startButton.alpha = 0.0 })
         } else {
             textView.text = "and don't forget to subscribe to my blog"
             UIView.animateWithDuration(1.0, animations: {() -> Void in self.startButton.alpha = 1.0 })
